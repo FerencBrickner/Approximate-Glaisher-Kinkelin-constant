@@ -7,10 +7,10 @@ from types import MappingProxyType
 def approx_glaisher_kinkelin_const(*, PRECISION: Final[int] = 22) -> float:
     n: int = PRECISION
     MAP_OF_TETRATED_NUMS: Final[map] = map(lambda i: i**i, range(n))
-    H: Final[int] = reduce(lambda x, y: x * y, MAP_OF_TETRATED_NUMS)
+    Hyperfactorial_of_n: Final[int] = reduce(lambda x, y: x * y, MAP_OF_TETRATED_NUMS)
     del MAP_OF_TETRATED_NUMS
-    numerator: float = float(H)
-    del H
+    numerator: float = float(Hyperfactorial_of_n)
+    del Hyperfactorial_of_n
 
     def approx_e_helper_function() -> float:
         NUMBER_OF_STEPS: Final[int] = 20
