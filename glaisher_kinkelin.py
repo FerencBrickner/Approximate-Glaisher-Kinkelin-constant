@@ -35,6 +35,10 @@ def approx_glaisher_kinkelin_const(*, PRECISION: Final[int] = 22) -> float:
     return solution
 
 
-if __name__ == "__main__":
+def main(*args, **kwargs) -> None:
     logging.basicConfig(level=logging.INFO)
     logging.info(approx_glaisher_kinkelin_const())
+
+
+if __name__ == "__main__":
+    main()
